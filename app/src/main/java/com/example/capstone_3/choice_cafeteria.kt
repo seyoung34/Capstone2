@@ -3,7 +3,6 @@ package com.example.capstone_3
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -31,21 +30,21 @@ class choice_cafeteria : AppCompatActivity() {
 
         btn_1?.let { button ->
             button.setOnClickListener {
-                val intent = Intent(this@choice_cafeteria, choice_baekrok::class.java)
+                val intent = Intent(this@choice_cafeteria, ChoiceBaekrokFragment::class.java)
                 startActivity(intent)
             }
         }
 
         btn_2?.let { button ->
             button.setOnClickListener {
-                val intent = Intent(this@choice_cafeteria, choice_chenge::class.java)
+                val intent = Intent(this@choice_cafeteria, ChoiceChengeFragment::class.java)
                 startActivity(intent)
             }
         }
 
         btn_3?.let { button ->
             button.setOnClickListener {
-                val intent = Intent(this@choice_cafeteria, choice_chenge::class.java)
+                val intent = Intent(this@choice_cafeteria, ChoiceChengeFragment::class.java)
                 startActivity(intent)
             }
         }

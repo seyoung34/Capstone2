@@ -28,13 +28,16 @@
             android:name=".choice_doori"
             android:exported="false" />
         <activity
-            android:name=".choice_chenge"
+            android:name=".ChoiceChengeFragment"
             android:exported="false" />
         <activity
-            android:name=".choice_baekrok"
+            android:name=".ChoiceBaekrokFragment"
             android:exported="false" />
         <activity
             android:name=".choice_cafeteria"
+            android:exported="false" />
+        <activity
+            android:name=".TablayoutPagerSimpleActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

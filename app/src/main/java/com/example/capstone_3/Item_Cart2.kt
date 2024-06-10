@@ -42,7 +42,7 @@ class Item_Cart2 : AppCompatActivity() {
             startActivity(intent)
         }
         move_chenge?.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this@Item_Cart2, choice_chenge::class.java)
+            val intent = Intent(this@Item_Cart2, ChoiceChengeFragment::class.java)
             intent.putParcelableArrayListExtra("cartList_return", arrayList)
             startActivity(intent)
         })
@@ -64,7 +64,7 @@ class Item_Cart2 : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this@Item_Cart2, choice_chenge::class.java)
+        val intent = Intent(this@Item_Cart2, ChoiceChengeFragment::class.java)
         intent.putParcelableArrayListExtra("cartList_return", arrayList)
         super.onBackPressed()
     }

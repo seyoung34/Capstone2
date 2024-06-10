@@ -43,7 +43,7 @@ class Item_Cart : AppCompatActivity() {
             startActivity(intent)
         }
         move_baekrok?.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this@Item_Cart, choice_baekrok::class.java)
+            val intent = Intent(this@Item_Cart, ChoiceBaekrokFragment::class.java)
             intent.putParcelableArrayListExtra("cartList_return", arrayList)
             startActivity(intent)
         })
@@ -65,7 +65,7 @@ class Item_Cart : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this@Item_Cart, choice_baekrok::class.java)
+        val intent = Intent(this@Item_Cart, ChoiceBaekrokFragment::class.java)
         intent.putParcelableArrayListExtra("cartList_return", arrayList)
         super.onBackPressed()
     }

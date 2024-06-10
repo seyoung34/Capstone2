@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".choice_baekrok"
+    tools:context=".ChoiceBaekrokFragment"
     android:background="#FFFDF0"
     android:orientation="vertical">
 
@@ -251,16 +251,7 @@
         </LinearLayout>
     </ScrollView>
 
-<!--    <TextView-->
-<!--        android:id="@+id/ok"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:gravity="center"-->
-<!--        android:background="#367588"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="40sp"-->
-<!--        android:text="ok"/>-->
+
 
     <TextView
         android:id="@+id/item_cart"
