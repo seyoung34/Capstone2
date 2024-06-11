@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".choice_doori"
+    tools:context=".ChoiceDooriFragment"
     android:background="#FFFDF0"
     android:orientation="vertical">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="740dp"
+        android:layout_height="0dp"
+        android:layout_weight="10"
         android:fillViewport="true"
         android:scrollbars="none">
         <LinearLayout
@@ -110,14 +111,16 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/item_cart"
+        android:id="@+id/doori_item_cart"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="0"
         android:gravity="center"
         android:background="#367588"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="장바구니"/>
+        android:text="장바구니"
+        android:visibility="invisible"/>
 
 
 

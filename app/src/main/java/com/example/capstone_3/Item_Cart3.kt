@@ -42,7 +42,7 @@ class Item_Cart3 : AppCompatActivity() {
             startActivity(intent)
         }
         move_doori?.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this@Item_Cart3, choice_doori::class.java)
+            val intent = Intent(this@Item_Cart3, ChoiceDooriFragment::class.java)
             result_3 += arrayList!!.size
             sharedPreferences.edit().putInt("orderCountC", result_3).apply()
             startActivity(intent)
@@ -65,7 +65,7 @@ class Item_Cart3 : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this@Item_Cart3, choice_doori::class.java)
+        val intent = Intent(this@Item_Cart3, ChoiceDooriFragment::class.java)
         intent.putParcelableArrayListExtra("cartList_return", arrayList)
         super.onBackPressed()
     }

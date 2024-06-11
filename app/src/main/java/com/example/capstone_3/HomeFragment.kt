@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         textViewA = view.findViewById(R.id.textViewA)
         textViewB = view.findViewById(R.id.textViewB)
         textViewC = view.findViewById(R.id.textViewC)
-        btn_pay = view.findViewById(R.id.btn_pay)
+//        btn_pay = view.findViewById(R.id.btn_pay)
         btn_reset = view.findViewById(R.id.btn_reset)
         Left = view.findViewById(R.id.Left)
         today_menu_text = view.findViewById(R.id.today_menu_text)

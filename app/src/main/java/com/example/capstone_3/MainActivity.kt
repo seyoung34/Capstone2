@@ -1,12 +1,7 @@
 package com.example.capstone_3
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,21 +10,23 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    companion object {
+        var arrayList: ArrayList<MainData> = ArrayList()
+    }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -> //시스템바 고려해서 레이아웃 표시
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Log.d("testt","MainActivity에서 onCreate 로그")
+        Log.d("testt", "MainActivity에서 onCreate 로그")
 
         supportFragmentManager.beginTransaction().replace(R.id.container, HomeFragment()).commit()
 
-        // 바텀 네비게이션 뷰 리스너 설정
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -42,15 +39,15 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.menu_cart -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.container, ItemCartFragment()).commit()
+                    val itemCartFragment = ItemCartFragment()
+                    val bundle = Bundle()
+                    bundle.putParcelableArrayList("cartList", arrayList)
+                    itemCartFragment.arguments = bundle
+                    supportFragmentManager.beginTransaction().replace(R.id.container, itemCartFragment).commit()
                     true
                 }
                 else -> false
             }
         }
-
-
-
     }
-
 }

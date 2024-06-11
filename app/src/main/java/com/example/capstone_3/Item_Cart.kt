@@ -50,23 +50,13 @@ class Item_Cart : AppCompatActivity() {
     }
 
     override fun onResume() {
-
-        // onResume 시, Intent로부터 장바구니 목록을 받아와서 리스트에 반영
-        val intent = intent
-        if (intent != null && intent.hasExtra("cartList")) {
-            val cartList = intent.getParcelableArrayListExtra<MainData>("cartList")
-            if (cartList != null) {
-                arrayList!!.clear()
-                arrayList!!.addAll(cartList)
-                mainAdapter!!.notifyDataSetChanged()
-            }
-        }
         super.onResume()
+        mainAdapter?.notifyDataSetChanged()
     }
 
-    override fun onBackPressed() {
-        val intent = Intent(this@Item_Cart, ChoiceBaekrokFragment::class.java)
-        intent.putParcelableArrayListExtra("cartList_return", arrayList)
-        super.onBackPressed()
-    }
+//    override fun onBackPressed() {
+//        val intent = Intent(this@Item_Cart, ChoiceBaekrokFragment::class.java)
+//        intent.putParcelableArrayListExtra("cartList_return", arrayList)
+//        super.onBackPressed()
+//    }
 }

@@ -254,15 +254,16 @@
 
 
     <TextView
-        android:id="@+id/item_cart"
+        android:id="@+id/baekrok_item_cart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:gravity="center"
         android:background="#367588"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:text="장바구니"/>
+        android:text="장바구니"
+        android:visibility="invisible"/>
 
 
 

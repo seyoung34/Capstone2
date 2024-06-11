@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFDD0"
-    tools:context=".Item_Cart">
+    tools:context=".ItemCartFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -28,18 +28,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/move_baekrok"
-            android:layout_width="57dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="뒤로"
-            android:textSize="20sp" />
-
-        <Button
             android:id="@+id/btn_pay"
-            android:layout_width="114dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_margin="10dp"
             android:text="결제하기" />
 
     </LinearLayout>
